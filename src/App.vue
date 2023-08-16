@@ -1,15 +1,23 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3.0 + Vite" />
+  <main>
+    <TaskCard></TaskCard>
+  </main>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TaskCard from "./components/TaskCard.vue";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    TaskCard,
+    
+  },
+  setup() {
+
   }
-}
+
+  }
 </script>
+
+ 
