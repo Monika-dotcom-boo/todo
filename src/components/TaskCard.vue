@@ -5,8 +5,8 @@
             <p>{{ model.description }}</p>
         </div>
         <div>
-            <button v-if="!model.status">OK</button>
-            <button v-else>USUŃ</button>
+            <button @click="emitOnDone" v-if="!model.status">✅</button>
+            <button @click="emitOnRemove" v-else>❌</button>
         </div>
     </div>
 </template>
@@ -15,22 +15,27 @@
     export default{
         emits: ['onDone', 'onRemove'],
         props: {
-             model: {
-                required: true,
-                 default: {
-                    id: 0,
-                    title: 'Create video',
-                    description: 'And upload on YouTube',
-                    status: false
+            model: {
+            required: true,
+            default: {
+                id: 0,
+                title: 'Create video',
+                description: 'And upload on YouTube',
+                status: false
                 }
                 }
-    },
-        setup( ){
-            
+            },  
+            setup(props, { emit }) {
+                const emitOnDone = () => {
+                 emit('onDone')
+            }
+            const emitOnRemove = () => {
+            emit('onRemove')
+            }
+            return {
+            emitOnDone,
+            emitOnRemove
+            }
         }
-    }
+     }
 </script>
-
-<style scoped>
-
-</style>
