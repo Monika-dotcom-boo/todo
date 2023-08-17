@@ -1,6 +1,6 @@
 <template>
-  <main>
-    <TaskInput @onAddTask="addTasks"></TaskInput>
+  <main class="max-w-md margin-auto">
+    <TaskInput @onAddTask="addTask"></TaskInput>
     <ul>
       <li v-for="item in taskList" :key="item.id">
         <TaskCard @onRemove="removeTask(item.id)" @onDone="setDoneTask(item.id)" :model="item"></TaskCard>

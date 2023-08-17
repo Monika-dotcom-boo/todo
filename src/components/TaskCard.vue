@@ -1,12 +1,12 @@
 <template>
     <div>
-        <div class="task-card">
+        <div class="flex justify-between items-center grid-rows-auto auto-cols-max gap-0 rounded border: solid 1px lightgrey p-2.5">
             <h4>{{ model.title }}</h4>
             <p>{{ model.description }}</p>
         </div>
         <div>
-            <button @click="emitOnDone" v-if="!model.status">✅</button>
-            <button @click="emitOnRemove" v-else>❌</button>
+            <button class="rounded border border-solid border-1x lightgrey p-2.5" @click="emitOnDone" v-if="!model.status" >✅</button>
+            <button class="rounded border border-solid border-1x lightgrey p-2.5" @click="emitOnRemove" v-else>❌</button>
         </div>
     </div>
 </template>
@@ -37,5 +37,5 @@
             emitOnRemove
             }
         }
-     }
+     };
 </script>

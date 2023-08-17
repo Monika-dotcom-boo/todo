@@ -1,7 +1,7 @@
 <template>
-    <div class="task-input">
-      <input v-model="title" placeholder="Title" type="text">
-      <input v-model="description" placeholder="Description" type="text">
+    <div class="m-2.5 flex 	place-content: space-around;">
+      <input class="rounded border border-solid border-1x lightgrey p-2.5" v-model="title" placeholder="Title" type="text">
+      <input class="rounded border border-solid border-1x lightgrey p-2.5" v-model="description" placeholder="Description" type="text">
       <button @click="onAddTask">Add task</button>
     </div>
 </template>
