@@ -1,6 +1,6 @@
 <template>
   <main class="max-w-md margin-auto">
-    <TaskInput @onAddTask="addTask"></TaskInput>
+    <TaskInput @onAddTask="addTasks"></TaskInput>
     <ul>
       <li v-for="item in taskList" :key="item.id">
         <TaskCard @onRemove="removeTask(item.id)" @onDone="setDoneTask(item.id)" :model="item"></TaskCard>
@@ -24,7 +24,7 @@ export default {
     const taskList = ref([{id: 0, title:'Create video', description: 'And upload on YT', status: false}])
   
     const addTasks = ({title, description}) => {
-      taskList.value = [...taskList.value, {id: taskList.value[taskList.value.lenght - 1].id +1, title, description, status: false}]
+      taskList.value = [...taskList.value, {id: taskList.value[taskList.value.length - 1].id +1, title, description, status: false}]
     }
   
     const setDoneTask = (id) => {

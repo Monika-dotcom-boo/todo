@@ -37,5 +37,5 @@
             emitOnRemove
             }
         }
-     };
+     }
 </script>
