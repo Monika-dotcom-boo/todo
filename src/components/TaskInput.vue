@@ -10,21 +10,19 @@
 import { ref } from 'vue' 
 
 export default {
-  emits: {
-    onAddTask({ title, description }) { 
-      if(title === '' || description === '') {
-        alert('Fill some info please!')
-        return false
-      }
-      return true
-    }
-  },
+  emits: ['onAddTask'],
     setup(props, { emit}) {
         const title = ref('')
         const description = ref('')
   
         const onAddTask = () => {
-            emit('onAddTask', { title: title.value, description: description.value })
+          if(title.value === '' || description.value === '') {
+            alert('Fill some info please!')
+            return false
+          }
+          emit('onAddTask', { title: title.value, description: description.value })
+          title.value = '';
+          description.value = ''
         }   
       return {
         title,
