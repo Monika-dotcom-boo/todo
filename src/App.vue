@@ -24,7 +24,7 @@ export default {
     const taskList = ref([])
   
     const addTasks = ({title, description}) => {
-      taskList.value = [...taskList.value, {id: taskList.value[taskList.value.length -1]?.id +1, title, description, status: false}]
+      taskList.value = [...taskList.value, {id: taskList.value[taskList.value.length -1]?.id ?? 0 +1, title, description, status: false}]
     }
   
     const setDoneTask = (id) => {

@@ -5,8 +5,8 @@
             <p>{{ model.description }}</p>
         </div>
         <div>
-            <button class="rounded border border-solid border-1x lightgrey p-2.5" @click="emitOnDone" v-if="!model.status" >✅</button>
-            <button class="rounded border border-solid border-1x lightgrey p-2.5" @click="emitOnRemove" v-else>❌</button>
+            <button class="rounded border border-solid border-[lightgrey] p-2.5" @click="emitOnDone" v-if="!model.status" >✅</button>
+            <button class="rounded border border-solid border-[lightgrey] p-2.5" @click="emitOnRemove" v-else>❌</button>
         </div>
     </div>
 </template>
