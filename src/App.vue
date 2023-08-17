@@ -1,5 +1,5 @@
 <template>
-  <main class="max-w-md margin-auto">
+  <main class="w-[500px] max-w-full mx-auto">
     <TaskInput @onAddTask="addTasks"></TaskInput>
     <ul>
       <li v-for="item in taskList" :key="item.id">

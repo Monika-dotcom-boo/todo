@@ -1,8 +1,8 @@
 <template>
-    <div class="m-2.5 flex 	place-content: space-around;">
-      <input class="rounded border border-solid border-1x lightgrey p-2.5" v-model="title" placeholder="Title" type="text">
-      <input class="rounded border border-solid border-1x lightgrey p-2.5" v-model="description" placeholder="Description" type="text">
-      <button @click="onAddTask">Add task</button>
+    <div class="m-2.5 flex flex-wrap">
+      <input class="rounded border border-solid border-[lightgrey] p-2.5 w-full  mb-3" v-model="title" placeholder="Title" type="text">
+      <input class="rounded border border-solid border-[lightgrey] p-2.5 w-full mb-3" v-model="description" placeholder="Description" type="text">
+      <button class="rounded border border-solid border-[lightgrey] p-2.5 w-full bg-gray-400 mb-3" @click="onAddTask">Add task</button>
     </div>
 </template>
   

@@ -1,12 +1,12 @@
 <template>
-    <div>
-        <div class="flex justify-between items-center grid-rows-auto auto-cols-max gap-0 rounded border: solid 1px lightgrey p-2.5">
-            <h4>{{ model.title }}</h4>
+    <div class="flex rounded border border-solid border-[lightgrey] p-2.5 justify-between items-center m-2.5">
+        <div class="flex flex-col p-2.5">
+            <h4 class="font-bold">{{ model.title }}</h4>
             <p>{{ model.description }}</p>
         </div>
         <div>
-            <button class="rounded border border-solid border-[lightgrey] p-2.5" @click="emitOnDone" v-if="!model.status" >✅</button>
-            <button class="rounded border border-solid border-[lightgrey] p-2.5" @click="emitOnRemove" v-else>❌</button>
+            <button class="p-2.5 " @click="emitOnDone" v-if="!model.status">✅</button>
+            <button class="p-2.5" @click="emitOnRemove" v-else>❌</button>
         </div>
     </div>
 </template>
