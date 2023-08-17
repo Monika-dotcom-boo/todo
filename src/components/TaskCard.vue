@@ -23,16 +23,16 @@
                 description: 'And upload on YouTube',
                 status: false
                 }
-                }
-            },  
-            setup(props, { emit }) {
-                const emitOnDone = () => {
-                 emit('onDone')
             }
+        },  
+        setup(props, { emit }) {
+            const emitOnDone = () => {
+            emit('onDone')
+        }
             const emitOnRemove = () => {
             emit('onRemove')
             }
-            return {
+        return {
             emitOnDone,
             emitOnRemove
             }

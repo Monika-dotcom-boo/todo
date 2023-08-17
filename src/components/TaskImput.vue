@@ -1,13 +1,13 @@
 <template>
     <div class="task-input">
-      <imput v-model="title" placeholder="Title" type="text"></imput>
-      <imput v-model="description" placeholder="Description" type="text"></imput> 
+      <input v-model="title" placeholder="Title" type="text">
+      <input v-model="description" placeholder="Description" type="text">
       <button @click="onAddTask">Add task</button>
     </div>
-  </template>
+</template>
   
-  <script>
-  import { ref } from 'vue' 
+<script>
+import { ref } from 'vue' 
 
 export default {
   emits: {
@@ -19,9 +19,9 @@ export default {
       return true
     }
   },
-    setup() {
-        const title = ref( value: '')
-        const description = ref( value: '')
+    setup(props, { emit}) {
+        const title = ref('')
+        const description = ref('')
   
         const onAddTask = () => {
             emit('onAddTask', { title: title.value, description: description.value })
