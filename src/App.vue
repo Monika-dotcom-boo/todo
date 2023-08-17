@@ -21,10 +21,10 @@ export default {
     TaskInput
   },
   setup() {
-    const taskList = ref([{id: 0, title:'Create video', description: 'And upload on YT', status: false}])
+    const taskList = ref([])
   
     const addTasks = ({title, description}) => {
-      taskList.value = [...taskList.value, {id: taskList.value[taskList.value.length - 1].id +1, title, description, status: false}]
+      taskList.value = [...taskList.value, {id: taskList.value[taskList.value.length -1]?.id +1, title, description, status: false}]
     }
   
     const setDoneTask = (id) => {
