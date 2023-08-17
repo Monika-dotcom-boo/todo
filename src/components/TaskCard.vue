@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="task-card my-style">
+        <div class="task-card">
             <h4>{{ model.title }}</h4>
             <p>{{ model.description }}</p>
         </div>

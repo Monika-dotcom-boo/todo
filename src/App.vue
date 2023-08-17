@@ -1,6 +1,7 @@
 <template>
   <main>
     <TaskCard></TaskCard>
+    <TaskImput></TaskImput>
   </main>
 </template>
 
@@ -12,8 +13,9 @@ export default {
   name: 'App',
   components: {
     TaskCard,
-    
-  },
+    TaskInput,
+    TaskImput
+},
   setup() {
 
   }
