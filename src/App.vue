@@ -31,7 +31,7 @@ export default {
     const setDoneTask = (id) => {
       taskList.value = taskList.value.map(x => {
         if(x.id === id)
-          x.status = true
+          x.status = !x.status
         return x 
       })
     }
